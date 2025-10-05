@@ -2,6 +2,15 @@
 
 This repository focuses on **exploratory data analysis (EDA)** of Indian Premier League (IPL) matches and ball-by-ball deliveries to **learn and practice Pandas**, with visualizations in **Matplotlib** and **Seaborn** where useful.
 
+## 📹 Learning Resources
+
+**YouTube Playlist:** [Pandas Tutorial Series](https://youtube.com/playlist?list=PLKnIA16_RmvbR85fgbfVRKOiMokUKVupy&si=dPAmRaWZvm5LanrA)
+
+**Pandas Documentation:** [Official Pandas Docs](https://pandas.pydata.org/docs/)
+- [User Guide](https://pandas.pydata.org/docs/user_guide/index.html)
+- [API Reference](https://pandas.pydata.org/docs/reference/index.html)
+- [Getting Started](https://pandas.pydata.org/docs/getting_started/index.html)
+
 All analyses are driven from two CSV files: `matches.csv` and `deliveries.csv`, loaded into DataFrames named `data` and `deliveries` within the notebook [`IPL-analysis.ipynb`](IPL-analysis.ipynb). The project demonstrates **indexing, grouping, reshaping, filtering, and plotting workflows** suitable for beginners and intermediate learners.
 
 ---
@@ -112,7 +121,7 @@ pip install jupyterlab
 
 Hands-on Pandas workflows: loading CSVs, inspecting dtypes, handling missing data, filtering, aggregating, reshaping, and visualizing.
 
-Companion video series available to reinforce API concepts with live coding over IPL datasets.
+**Follow along with the [YouTube playlist](https://youtube.com/playlist?list=PLKnIA16_RmvbR85fgbfVRKOiMokUKVupy&si=dPAmRaWZvm5LanrA)** to reinforce API concepts with live coding over IPL datasets, and refer to the [official pandas documentation](https://pandas.pydata.org/docs/) for detailed explanations of functions and methods.
 
 ---
 
