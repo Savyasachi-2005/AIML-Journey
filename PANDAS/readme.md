@@ -117,13 +117,6 @@ pip install jupyterlab
 
 ---
 
-## Learning Focus
-
-Hands-on Pandas workflows: loading CSVs, inspecting dtypes, handling missing data, filtering, aggregating, reshaping, and visualizing.
-
-**Follow along with the [YouTube playlist](https://youtube.com/playlist?list=PLKnIA16_RmvbR85fgbfVRKOiMokUKVupy&si=dPAmRaWZvm5LanrA)** to reinforce API concepts with live coding over IPL datasets, and refer to the [official pandas documentation](https://pandas.pydata.org/docs/) for detailed explanations of functions and methods.
-
----
 
 ## Extend the Analysis
 
