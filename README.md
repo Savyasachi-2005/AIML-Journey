@@ -17,9 +17,16 @@ Welcome to my structured journey into **Artificial Intelligence** and **Machine 
 
 ```
 .
-├── numpy/            # NumPy notes + notebook
+├── NUMPY/            # NumPy notes + notebook
 │   ├── README.md     # Detailed NumPy cheatsheet
-│   └── numpy.ipynb   # Interactive code examples
+│   └── Numpy.ipynb   # Interactive code examples
+├── PANDAS/           # Pandas data manipulation
+│   ├── readme.md     # Pandas documentation
+│   ├── IPL analysis.ipynb  # Cricket data analysis
+│   ├── deliveries.csv      # Sample datasets
+│   ├── matches.csv
+│   ├── Fortune500.csv
+│   └── titanic.csv
 └── README.md         # Main roadmap
 ```
 
@@ -61,9 +68,9 @@ Welcome to my structured journey into **Artificial Intelligence** and **Machine 
 
 ## 📈 Current Progress
 
-- **Completed:** NumPy playlist
-- **Next:** Pandas (Data handling and cleaning)
-- **Working on:** Setting up structured notes and notebooks
+- **Completed:** NumPy playlist, Pandas (Data handling and cleaning)
+- **Next:** Matplotlib (Visualization basics)
+- **Working on:** Data analysis projects with real datasets (IPL, Titanic, Fortune500)
 
 ***
 
