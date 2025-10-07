@@ -6,7 +6,7 @@ This repository contains **comprehensive Matplotlib tutorials and examples** cov
 
 **YouTube Tutorials:**
 - [Matplotlib Basics Live Tutorial](https://www.youtube.com/live/XaKn_cKFlSY?si=jUoRmebX1QmMFKd_) - Fundamentals
-- [Advanced Matplotlib Live Tutorial](https://www.youtube.com/live/DWVLRhnuGqI?si=23PJXAaherqo16sX) - Advanced concepts
+- [Advanced Matplotlib Live Tutorial](https://www.youtube.com/live/7YDc5xU9CQQ?si=xMqxN3cRsvkdD_xs) - Advanced concepts
 
 **Matplotlib Documentation:** [Official Matplotlib Docs](https://matplotlib.org/)
 - [User Guide](https://matplotlib.org/stable/users/index.html)
@@ -212,7 +212,8 @@ The notebook includes practical examples such as:
 ## 🎥 Video Learning Path
 
 1. **Start with [Basics Tutorial](https://www.youtube.com/live/XaKn_cKFlSY?si=jUoRmebX1QmMFKd_)** - Foundation concepts
-2. **Progress to [Advanced Tutorial](https://www.youtube.com/live/DWVLRhnuGqI?si=23PJXAaherqo16sX)** - Complex visualizations
+2. **Progress to [Advanced Tutorial](https://www.youtube.com/live/7YDc5xU9CQQ?si=xMqxN3cRsvkdD_xs)** - Complex visualizations
 3. **Reference [Official Documentation](https://matplotlib.org/)** - Detailed function guides
+
 
 This comprehensive approach ensures you master both fundamental and advanced matplotlib techniques!
