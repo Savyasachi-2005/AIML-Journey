@@ -93,11 +93,57 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 - **Bivariate Histogram**: Bins the data within rectangles that tile the plot and shows the count of observations with fill color
 - **Bivariate KDE**: Shows density estimation for two variables
 
+### Matrix Plots
+
+#### HeatMap
+- Plots rectangular data as a color-encoded matrix
+- Axis level function: `sns.heatmap()`
+- Used for visualizing matrix-like data (pivot tables, correlation matrices, etc.)
+- Parameters:
+  - `annot`: Display values in cells
+  - `linewidth`: Width of lines dividing cells
+  - `cmap`: Color palette (e.g., 'summer', 'coolwarm', 'viridis')
+- Common use case: Displaying life expectancy across countries and years
+
+#### ClusterMap
+- Creates a hierarchically-clustered heatmap
+- Figure level function: `sns.clustermap()`
+- Automatically performs clustering on rows and columns
+- Useful for identifying patterns and groupings in data
+- Works well with numerical features
+
 ### Datasets Used
 - `tips` - Seaborn built-in dataset
 - `gapminder` - From plotly.express
 - `titanic` - Seaborn built-in dataset
+- `iris` - From plotly.express
 
 ---
 
-**Note:** More content will be added as the tutorial progresses.
+## Learning Resources
+
+### Video Tutorials
+**Video 1 (Completed):** [Seaborn Tutorial](https://www.youtube.com/watch?v=DWVLRhnuGqI&list=PLEh1XlOqUn8LJIRnN7hRJtUOmThVbkiyr&index=6)
+- Covers: Relational Plots, Distribution Plots, and Matrix Plots
+
+**Video 2 (Upcoming):** To be covered
+- Will include: Categorical Plots, Regression Plots, and Multiplots
+
+---
+
+## Progress Tracker
+
+### ✅ Completed
+- [x] Relational Plots (Scatter, Line, Facet)
+- [x] Distribution Plots (Histogram, KDE, Rugplot, Bivariate)
+- [x] Matrix Plots (HeatMap, ClusterMap)
+
+### 📝 To Be Covered
+- [ ] Categorical Plots (Barplot, Countplot, Boxplot, Violinplot, Swarmplot)
+- [ ] Regression Plots (Regplot)
+- [ ] Multiplots (Jointplot, Pairplot)
+- [ ] Additional documentation and examples
+
+---
+
+**Note:** This documentation will be updated accordingly as I finish the tutorials and add new content to the notebook.
