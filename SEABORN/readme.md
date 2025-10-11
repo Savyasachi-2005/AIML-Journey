@@ -5,7 +5,7 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 
 ## Types of Functions
 - **Figure level**
-- **Axis level**
+- **Axes level**
 
 ## Main Classification
 
@@ -44,12 +44,12 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 
 #### Scatter Plot
 - Used mainly for numerical values
-- Axis level: `sns.scatterplot()`
+- Axes level: `sns.scatterplot()`
 - Figure level: `sns.relplot()` with `kind='scatter'`
 - Parameters: `data`, `x`, `y`, `hue`, `style`, `size`
 
 #### Line Plot
-- Axis level: `sns.lineplot()`
+- Axes level: `sns.lineplot()`
 - Figure level: `sns.relplot()` with `kind='line'`
 - Used for showing trends over time or continuous variables
 - Parameters: `hue`, `style`, `size`
@@ -71,7 +71,7 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 
 #### Histogram
 - Figure level: `sns.displot()` with `kind='hist'`
-- Axis level: `sns.histplot()`
+- Axes level: `sns.histplot()`
 - Parameters: `bins`, `hue`, `element`
 - Can be applied on both numerical and categorical data
 
@@ -80,7 +80,7 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 - Uses a kernel function centered on each data point
 - The bandwidth parameter controls the smoothness of the curve
 - Figure level: `sns.displot()` with `kind='kde'`
-- Axis level: `sns.kdeplot()`
+- Axes level: `sns.kdeplot()`
 - Parameters: `hue`, `fill`
 
 #### Rugplot
@@ -97,7 +97,7 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 
 #### HeatMap
 - Plots rectangular data as a color-encoded matrix
-- Axis level function: `sns.heatmap()`
+- Axes level function: `sns.heatmap()`
 - Used for visualizing matrix-like data (pivot tables, correlation matrices, etc.)
 - Parameters:
   - `annot`: Display values in cells
@@ -119,14 +119,14 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 #### Categorical Scatter Plots
 
 **Strip Plot**
-- Axis level: `sns.stripplot()`
+- Axes level: `sns.stripplot()`
 - Figure level: `sns.catplot()` with `kind='strip'`
 - Creates a categorical scatter plot
 - Parameters: `jitter` (adds random noise to prevent overlap), `hue`
 - Useful for showing individual data points
 
 **Swarm Plot**
-- Axis level: `sns.swarmplot()`
+- Axes level: `sns.swarmplot()`
 - Figure level: `sns.catplot()` with `kind='swarm'`
 - Similar to strip plot but automatically adjusts points to avoid overlap
 - Better for smaller datasets
@@ -135,7 +135,7 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 #### Categorical Distribution Plots
 
 **Box Plot**
-- Axis level: `sns.boxplot()`
+- Axes level: `sns.boxplot()`
 - Figure level: `sns.catplot()` with `kind='box'`
 - Displays distribution based on five-number summary:
   - Minimum
@@ -148,7 +148,7 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 - Parameters: `hue`, `x`, `y`
 
 **Violin Plot**
-- Axis level: `sns.violinplot()`
+- Axes level: `sns.violinplot()`
 - Figure level: `sns.catplot()` with `kind='violin'`
 - Combination of boxplot and KDE plot
 - Shows the probability density of data at different values
@@ -157,7 +157,7 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 #### Categorical Estimate Plots
 
 **Bar Plot**
-- Axis level: `sns.barplot()`
+- Axes level: `sns.barplot()`
 - Figure level: `sns.catplot()` with `kind='bar'`
 - Shows estimates of central tendency (mean by default)
 - Parameters:
@@ -166,14 +166,14 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
   - `hue`: Multiple categories
 
 **Point Plot**
-- Axis level: `sns.pointplot()`
+- Axes level: `sns.pointplot()`
 - Figure level: `sns.catplot()` with `kind='point'`
 - Shows point estimates and confidence intervals
 - Useful for showing trends across categories
 - Parameters: `hue`, `errorbar`
 
 **Count Plot**
-- Axis level: `sns.countplot()`
+- Axes level: `sns.countplot()`
 - Figure level: `sns.catplot()` with `kind='count'`
 - Shows the count of observations in each category
 - Similar to histogram but for categorical variables
@@ -188,7 +188,7 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 **Purpose:** Draw a scatterplot of two variables (x & y), fit a regression model y~x, and plot the resulting regression line with a 95% confidence interval.
 
 #### Reg Plot
-- Axis level: `sns.regplot()`
+- Axes level: `sns.regplot()`
 - Simple regression plot
 - Does NOT support `hue` parameter
 - Best for single regression line
