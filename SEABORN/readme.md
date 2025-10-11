@@ -112,6 +112,155 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 - Useful for identifying patterns and groupings in data
 - Works well with numerical features
 
+### Categorical Plots
+
+**Purpose:** Used to visualize relationships between categorical variables and numerical variables, or distributions across categories.
+
+#### Categorical Scatter Plots
+
+**Strip Plot**
+- Axis level: `sns.stripplot()`
+- Figure level: `sns.catplot()` with `kind='strip'`
+- Creates a categorical scatter plot
+- Parameters: `jitter` (adds random noise to prevent overlap), `hue`
+- Useful for showing individual data points
+
+**Swarm Plot**
+- Axis level: `sns.swarmplot()`
+- Figure level: `sns.catplot()` with `kind='swarm'`
+- Similar to strip plot but automatically adjusts points to avoid overlap
+- Better for smaller datasets
+- Parameters: `hue`
+
+#### Categorical Distribution Plots
+
+**Box Plot**
+- Axis level: `sns.boxplot()`
+- Figure level: `sns.catplot()` with `kind='box'`
+- Displays distribution based on five-number summary:
+  - Minimum
+  - First Quartile (Q1)
+  - Median
+  - Third Quartile (Q3)
+  - Maximum
+- Shows outliers, symmetry, data grouping, and skewness
+- Can create single boxplot for numerical data only
+- Parameters: `hue`, `x`, `y`
+
+**Violin Plot**
+- Axis level: `sns.violinplot()`
+- Figure level: `sns.catplot()` with `kind='violin'`
+- Combination of boxplot and KDE plot
+- Shows the probability density of data at different values
+- Parameters: `hue`, `split` (splits violin for hue categories)
+
+#### Categorical Estimate Plots
+
+**Bar Plot**
+- Axis level: `sns.barplot()`
+- Figure level: `sns.catplot()` with `kind='bar'`
+- Shows estimates of central tendency (mean by default)
+- Parameters:
+  - `estimator`: Statistical function (e.g., `np.std`, `np.min`, `np.max`)
+  - `ci` or `errorbar`: Confidence interval display
+  - `hue`: Multiple categories
+
+**Point Plot**
+- Axis level: `sns.pointplot()`
+- Figure level: `sns.catplot()` with `kind='point'`
+- Shows point estimates and confidence intervals
+- Useful for showing trends across categories
+- Parameters: `hue`, `errorbar`
+
+**Count Plot**
+- Axis level: `sns.countplot()`
+- Figure level: `sns.catplot()` with `kind='count'`
+- Shows the count of observations in each category
+- Similar to histogram but for categorical variables
+- Parameters: `hue`
+
+#### Faceting with catplot
+- Can create faceted plots using `col` and `row` parameters
+- Allows visualization across multiple categorical dimensions
+
+### Regression Plots
+
+**Purpose:** Draw a scatterplot of two variables (x & y), fit a regression model y~x, and plot the resulting regression line with a 95% confidence interval.
+
+#### Reg Plot
+- Axis level: `sns.regplot()`
+- Simple regression plot
+- Does NOT support `hue` parameter
+- Best for single regression line
+
+#### LM Plot (Linear Model Plot)
+- Figure level: `sns.lmplot()`
+- Supports `hue` parameter for multiple regression lines
+- Allows faceting with `col` and `row`
+- More flexible than regplot
+
+#### Resid Plot (Residual Plot)
+- `sns.residplot()`
+- Plots residuals of regression
+- Useful for checking regression assumptions
+- Shows the difference between observed and predicted values
+
+### Multi-Plots
+
+#### FacetGrid
+- Second way to create faceted plots
+- More flexible than using `col` and `row` in other functions
+- Usage:
+  ```python
+  g = sns.FacetGrid(data=tips, col='day', row='time')
+  g.map(sns.scatterplot, 'tip', 'total_bill')
+  g.add_legend()
+  ```
+
+#### Pairwise Relationships
+
+**Pair Plot**
+- Figure level: `sns.pairplot()`
+- Creates a grid of plots showing pairwise relationships
+- Diagonal shows distribution of each variable
+- Off-diagonal shows scatter plots between variables
+- Parameters: `hue` (color by category)
+- Great for exploring relationships in datasets
+
+**PairGrid**
+- More flexible version of pairplot
+- Allows custom plot types for different sections:
+  - `g.map()`: Apply to all plots
+  - `g.map_diag()`: Apply to diagonal plots
+  - `g.map_offdiag()`: Apply to off-diagonal plots
+  - `g.map_upper()`: Apply to upper triangle
+  - `g.map_lower()`: Apply to lower triangle
+- Example combinations:
+  - Diagonal: histogram, violinplot, KDE
+  - Off-diagonal: scatterplot, boxplot, histogram
+
+#### Joint Plots
+
+**Joint Plot**
+- Figure level: `sns.jointplot()`
+- Combines bivariate plot with univariate plots on margins
+- Available kinds: `'scatter'`, `'hist'`, `'hex'`, `'kde'`, `'reg'`, `'resid'`
+- Shows relationship between two variables with their distributions
+
+**JointGrid**
+- More flexible version of jointplot
+- Allows custom plot combinations
+- Usage:
+  ```python
+  g = sns.JointGrid(data=tips, x='total_bill', y='tip')
+  g.plot(sns.scatterplot, sns.violinplot)
+  ```
+
+### Useful Seaborn Functions
+
+- `sns.get_dataset_names()` - Get list of all available built-in datasets
+- `sns.load_dataset('dataset_name')` - Load a built-in dataset
+
 ### Datasets Used
 - `tips` - Seaborn built-in dataset
 - `gapminder` - From plotly.express
@@ -123,11 +272,11 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 ## Learning Resources
 
 ### Video Tutorials
-**Video 1 (Completed):** [Seaborn Tutorial](https://www.youtube.com/watch?v=DWVLRhnuGqI&list=PLEh1XlOqUn8LJIRnN7hRJtUOmThVbkiyr&index=6)
+**Video 1 (Completed):** [Seaborn Tutorial - Part 1](https://www.youtube.com/watch?v=DWVLRhnuGqI&list=PLEh1XlOqUn8LJIRnN7hRJtUOmThVbkiyr&index=6)
 - Covers: Relational Plots, Distribution Plots, and Matrix Plots
 
-**Video 2 (Upcoming):** To be covered
-- Will include: Categorical Plots, Regression Plots, and Multiplots
+**Video 2 (Completed):** [Seaborn Tutorial - Part 2](https://www.youtube.com/live/kLWeKeqc9Ms?si=pUB9qjOoZV57B4g1)
+- Covers: Categorical Plots, Regression Plots, and Multiplots
 
 ---
 
@@ -137,12 +286,9 @@ Seaborn is easy to use and is a better version of matplotlib with more graphs in
 - [x] Relational Plots (Scatter, Line, Facet)
 - [x] Distribution Plots (Histogram, KDE, Rugplot, Bivariate)
 - [x] Matrix Plots (HeatMap, ClusterMap)
-
-### 📝 To Be Covered
-- [ ] Categorical Plots (Barplot, Countplot, Boxplot, Violinplot, Swarmplot)
-- [ ] Regression Plots (Regplot)
-- [ ] Multiplots (Jointplot, Pairplot)
-- [ ] Additional documentation and examples
+- [x] Categorical Plots (Strip, Swarm, Box, Violin, Bar, Point, Count)
+- [x] Regression Plots (Regplot, LMplot, Residplot)
+- [x] Multiplots (FacetGrid, Pairplot, PairGrid, Jointplot, JointGrid)
 
 ---
 
